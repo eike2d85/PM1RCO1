@@ -36,7 +36,7 @@ def flex_stiff(E1, E2, E3, v12, v23, v31, G12,G23, G31):
     
     return C,S
 
-ksi_MPa = 6.894760
+ksi_MPa = 6.894760 # converte de ksi para MPa
 E1 = 4 * ksi_MPa
 E2 = 3 * ksi_MPa
 E3 = 3.1 * ksi_MPa
@@ -49,5 +49,5 @@ G31 = 2 * ksi_MPa
 
 C,S = flex_stiff(E1, E2, E3, v12, v23, v31, G12,G23, G31)
 
-print('Matriz de Rigidez: [MPa]\n', C)
-print('Matriz de Flexibilidade: [1/Mpa]\n', S)
+print('Matriz de Rigidez: [GPa]\n', C)
+print('Matriz de Flexibilidade: [1/Gpa]\n', S)
